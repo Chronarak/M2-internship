@@ -1,11 +1,12 @@
 import Lang.RValue
 import Lang.ContextItem
 
+open Iris Std ProgramLogic Language.Notation
+
 
 abbrev FunName := String
 
 
--- TODO : apparently lean is drunk?
 inductive Statement
   | Assign (P : Place) (rv : RValue)
   | IfThenElse (rv : RValue) (b1 b2 : List Statement)
@@ -13,10 +14,6 @@ inductive Statement
   | Return (rv : RValue)
   | Free (P : Place)
 deriving BEq
-
--- for reasons that are far beyond me, opening Iris makes
--- nested inductive fail???????????????????
-open Iris Std ProgramLogic Language.Notation
 
 abbrev Block := List Statement
 
