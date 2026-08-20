@@ -1,0 +1,17 @@
+name = "TestLib"
+defaultTargets = ["Lib", "MBLogic", "Lang"]
+
+[[require]]
+name = "iris"
+git.url = "https://github.com/leanprover-community/iris-lean.git" 
+git.subDir = "Iris" 
+rev = "master"
+
+[[lean_lib]]
+name = "Lib"
+
+[[lean_lib]]
+name = "MBLogic"
+
+[[lean_lib]]
+name = "Lang"
